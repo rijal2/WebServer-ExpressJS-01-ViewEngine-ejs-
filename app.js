@@ -2,6 +2,9 @@ const express = require('express')
 const app = express()
 const port = 3000
 
+//Menggunakan ejs
+app.set('view engine', 'ejs')
+
 
 //Setting halaman root (home)
 app.get('/', (req, res) => {

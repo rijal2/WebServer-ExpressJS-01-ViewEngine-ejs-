@@ -21,6 +21,35 @@ MENGGUNKAAN VIEW ENGINE EJS
 03. Bikin Folder VIEWS, karena sebelumnya tidak punya.
 04. Memindahkan file-file html ke "views".
 05. ubah extensi html menjadi ejs.(about.ejs, contact.ejs, index.ejs)
+06. Pada semua metode get, ganti res.sendFile() dengan res.render()
+    Contoh: res.render('index') => menuju halaman index
+            res.render('about') => menuju halaman about
+07. Install extensi ejs, agar VSCode mengetahui bahwa tanda ini <% %> merupakan tag dari ejs
+
+===========================================================================
+MENERAPKAN CONTROL FLOW DIDALAM EJS
+
+CONTROL FLOW 1 - ARRAY
+Rencananya pada halaman index akan dimunculkan daftar masiswa yang terdiri dari nama mahasiswa dan emailnya. Langkah:
+1. Buat Array Mhs
+    Di dalam metode get yang responnya menuju halaman index, buat sebuah array dengan nama mhs.
+    Array mhs ini berupa object yang masing2 object menyimpan nilai nama mahasiswa dan email.
+
+    const mhs = [{nama: mhs1, email: emailmhs1@gmail.com}]
+
+2. Pada halaman endex.ejs buat elemen yang akan digunakan menampilkan data seorang mahasiswa. Kemudian looping elemen tersebut menggunakn ejsforEach.
+    Contoh:
+    <% mhs.forEach(m => { %>
+      <ul>
+        <li>Nama: <%= m.nama %>  </li>
+        <li>Email: <%= m.email %> </li>
+      </ul>
+     
+    <% }) %>
+
+    dengan looping tersebut maka data mahasiswa yang berada di dalam array akan ditampilkan.
+
+
 
 
 

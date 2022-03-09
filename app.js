@@ -9,17 +9,37 @@ app.set('view engine', 'ejs')
 //Setting halaman root (home)
 app.get('/', (req, res) => {
     // res.sendFile('./index.html', {root: __dirname})
-    res.render('index')
+    const mhs = [
+        {
+            nama: "mhs1",
+            email: "emailmhs1@gmail.com"
+        },
+        {
+            nama: "mhs2",
+            email: "emailmhs2@gmail.com"
+        },
+        {
+            nama: "mhs3",
+            email: "emailmhs2@gmail.com"
+        },
+        {
+            nama: "mhs4",
+            email: "emailmhs2@gmail.com"
+        }
+    ]
+    res.render('index', { title: "Halaman Home", mhs});
 })
 
 //Setting halaman about
 app.get('/about', (req, res) => {
-    res.sendFile('./about.html', {root: __dirname})
+    // res.sendFile('./about.html', {root: __dirname})
+    res.render('about')
 })
 
 //Setting halaman Contact
 app.get('/contact', (req, res) => {
-    res.sendFile('./contact.html', {root: __dirname})
+    // res.sendFile('./contact.html', {root: __dirname})
+    res.render('contact')
 })
 
 //Latihan menggunakan metode rq.params. Penggunan metode ini akan menangkap request URL yang memiliki pola seperti ini: http://localhost:3000/produk/8/ctegory/rumah

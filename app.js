@@ -8,7 +8,8 @@ app.set('view engine', 'ejs')
 
 //Setting halaman root (home)
 app.get('/', (req, res) => {
-    res.sendFile('./index.html', {root: __dirname})
+    // res.sendFile('./index.html', {root: __dirname})
+    res.render('index')
 })
 
 //Setting halaman about

@@ -67,6 +67,10 @@ Skenenarionya adalah menampilkan pesan lain jika Array yang dibuat (diatas) koso
 ======================================================================================
 SISTEM LAYOUT
 
+1. Buat Folder Layouts didalam views
+2. Buat file header.ejs, nav.ejs, dan footer.ejs
+
+
 
 
 

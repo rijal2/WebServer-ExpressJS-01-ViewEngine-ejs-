@@ -49,6 +49,23 @@ Rencananya pada halaman index akan dimunculkan daftar masiswa yang terdiri dari 
 
     dengan looping tersebut maka data mahasiswa yang berada di dalam array akan ditampilkan.
 
+CONTROL FLOW 2 - IF
+Skenenarionya adalah menampilkan pesan lain jika Array yang dibuat (diatas) kosong atau tidak ada isinya.
+1. Hapus isi array mhs
+2. Gunakan tag ejsif
+    <% if (mhs.length < 1) { %>
+     <h2>Data Mahasiswa masih Kosong</h2>
+    <% } else{ %>
+    <% mhs.forEach(m => { %>
+      <ul>
+        <li>Nama: <%= m.nama %>  </li>
+        <li>Email: <%= m.email %> </li>
+      </ul>
+     
+    <% }) }%>
+
+======================================================================================
+SISTEM LAYOUT
 
 
 

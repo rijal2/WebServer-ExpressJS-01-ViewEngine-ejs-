@@ -10,22 +10,22 @@ app.set('view engine', 'ejs')
 app.get('/', (req, res) => {
     // res.sendFile('./index.html', {root: __dirname})
     const mhs = [
-        {
-            nama: "mhs1",
-            email: "emailmhs1@gmail.com"
-        },
-        {
-            nama: "mhs2",
-            email: "emailmhs2@gmail.com"
-        },
-        {
-            nama: "mhs3",
-            email: "emailmhs2@gmail.com"
-        },
-        {
-            nama: "mhs4",
-            email: "emailmhs2@gmail.com"
-        }
+        // {
+        //     nama: "mhs1",
+        //     email: "emailmhs1@gmail.com"
+        // },
+        // {
+        //     nama: "mhs2",
+        //     email: "emailmhs2@gmail.com"
+        // },
+        // {
+        //     nama: "mhs3",
+        //     email: "emailmhs2@gmail.com"
+        // },
+        // {
+        //     nama: "mhs4",
+        //     email: "emailmhs2@gmail.com"
+        // }
     ]
     res.render('index', { title: "Halaman Home", mhs});
 })

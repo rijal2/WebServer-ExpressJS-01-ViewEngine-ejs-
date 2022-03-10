@@ -69,6 +69,41 @@ SISTEM LAYOUT
 
 1. Buat Folder Layouts didalam views
 2. Buat file header.ejs, nav.ejs, dan footer.ejs
+3. Pada file about.ejs, contact.ejs, index.ejs. Potong bagian2 html menjadi 4 bagian. Kemudian masukkan kedalam file ejs yang berada di layouts sesuai dengan elemen nya masing2.
+
+  misal:
+  Bagian header
+
+  <!doctype html>
+  <html lang="en">
+    <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Bootstrap CSS -->
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+      <title>About </title>
+    </head>
+    <body>
+
+  bagian tersebut di potong dan dipindahkan ke file header.ejs.
+5. Lakukan hal yang sama untuk bagian nav dan footer. Sedangkan bagian body tetap biarkan berada di file aslinya.
+
+  Contoh:
+  <h1>Ini adalah Halaman About dari file about.html</h1>
+  biarkan elemen tersebut berada di file about.html
+
+6. Rangkai setiap halaman agar membentuk tampilan html yg ideal. Manfaatkan metode include() yang telah disediakan oleh ejs.
+
+  contoh:
+  Merangkai halaman contact dengan memanggil beberapa elemn html yang berada pada file di dalam folder layouts
+
+  <%- include('layouts/header') %> 
+  <%- include('layouts/nav') %> 
+  <h1>Ini adalah halaman Contact dari file contact.html</h1>
+  <%- include('layouts/footer') %> 
 
 
 
